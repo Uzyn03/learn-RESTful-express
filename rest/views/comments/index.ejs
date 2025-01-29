@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: rgb(5, 4, 4);
+            padding: 10px;
+            background-color: rgb(124, 195, 219);
+            border-radius: 5px;
+            margin-top: 1rem;
+            margin-left: 1rem;
+            position: absolute;
+        }
+        a:hover{
+            background-color: rgb(48, 126, 151);
+        }
+    </style>
+</head>
+<body>
+    <h1>comments</h1>
+    <ul>
+        <% for(let comment of comments) { %>
+            <li><%= comment.comment %> - <%= comment.username %></li>
+        <% } %>
+        
+    </ul>
+    <a href="/comments/create">tambah kata-kata hari ini</a>
+</body>
+</html>
