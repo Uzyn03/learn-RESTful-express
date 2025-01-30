@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit comment</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: rgb(5, 4, 4);
+            padding: 10px;
+            background-color: rgb(124, 195, 219);
+            border-radius: 5px;
+            margin-top: 1rem;
+            position: absolute;
+        }
+        body{
+            margin-left: 2rem;
+        }
+        .form-input{
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>edit comment</h1>
+    <form action="/comments/<%= comment.id %>?_method=PATCH" method="post">
+        <section class="form-input">
+            <label for="">Comment</label>
+        <textarea name="comment" id="" cols="30" rows="5"><%= comment.comment %></textarea>
+        </section>
+        <button>submit</button>
+    </form>
+    <a href="/comments">back</a>
+</body>
+</html>
